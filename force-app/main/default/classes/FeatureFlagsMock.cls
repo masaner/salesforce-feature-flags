@@ -8,6 +8,6 @@ public class FeatureFlagsMock implements IFeatureFlags {
 
     public FeatureFlags.FeatureEvaluationResult evaluate(String featureName) {
         Boolean isActive = featureMap.containsKey(featureName) ? featureMap.get(featureName) : false;
-        return new FeatureFlags.FeatureEvaluationResult(isActive, featureName, null);
+        return new FeatureFlags.FeatureEvaluationResult(isActive, featureName, FeatureFlags.FeatureReason.MOCK_VALUE);
     }
 }
